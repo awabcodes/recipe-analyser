@@ -1,0 +1,36 @@
+<h3 class="text-center mt-2">Analyze the recipe</h3>
+
+<div class="row">
+  <div class="col m-3">
+    <mat-card>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field class="full-width">
+          <mat-label>Recipe Title (Optional)</mat-label>
+          <input formControlName="title" type="text" matInput />
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Recipe Ingredients</mat-label>
+          <textarea
+            formControlName="ingredients"
+            matInput
+            rows="20"
+            placeholder="Ex. 4 teaspoons salt"
+          ></textarea>
+        </mat-form-field>
+
+        <div class="text-center">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="form.invalid"
+          >
+            Submit
+            <mat-icon>checkmark</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

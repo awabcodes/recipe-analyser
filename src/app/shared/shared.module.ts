@@ -13,6 +13,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
@@ -28,7 +29,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatMenuModule,
     MatDividerModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTableModule
   ],
   exports: [
     HeaderComponent,
@@ -42,7 +44,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatMenuModule,
     MatDividerModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTableModule
   ]
 })
 export class SharedModule { }
