@@ -1,0 +1,974 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>recipe-analyser documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">recipe-analyser documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#context" title="src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#createRequestOption" title="src/app/shared/util/request-util.ts"><b>createRequestOption</b>&nbsp;&nbsp;&nbsp;(src/.../request-util.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#mockData" title="src/app/services/response-sample.ts"><b>mockData</b>&nbsp;&nbsp;&nbsp;(src/.../response-sample.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/shared/util/request-util.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createRequestOption"></a>
+                        <span class="name">
+                            <b>
+                            createRequestOption</b>
+                            <a href="#createRequestOption"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(req?: any): HttpParams &#x3D;&gt; {
+  let options: HttpParams &#x3D; new HttpParams();
+  if (req) {
+    Object.keys(req).forEach(key &#x3D;&gt; {
+      if (key !&#x3D;&#x3D; &#x27;sort&#x27;) {
+        options &#x3D; options.set(key, req[key]);
+      }
+    });
+    if (req.sort) {
+      req.sort.forEach(val &#x3D;&gt; {
+        options &#x3D; options.append(&#x27;sort&#x27;, val);
+      });
+    }
+  }
+  return options;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Helper that creates HttpParams from req object</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.prod.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  production: true,
+  recipeApiUrl: &quot;https://api.edamam.com/api/nutrition-details&quot;,
+  recipeApiApplicationId: &quot;47379841&quot;,
+  recipeApiApplicationKey: &quot;d28718060b8adfd39783ead254df7f92&quot;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  production: false,
+  recipeApiUrl: &quot;https://api.edamam.com/api/nutrition-details&quot;,
+  recipeApiApplicationId: &quot;47379841&quot;,
+  recipeApiApplicationKey: &quot;d28718060b8adfd39783ead254df7f92&quot;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/services/response-sample.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mockData"></a>
+                        <span class="name">
+                            <b>
+                            mockData</b>
+                            <a href="#mockData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    &quot;uri&quot;: &quot;http://www.edamam.com/ontologies/edamam.owl#recipe_4476ac17dee044ffa51e88f5c2946546&quot;,
+    &quot;yield&quot;: 6,
+    &quot;calories&quot;: 1773,
+    &quot;totalWeight&quot;: 478.49523125,
+    &quot;dietLabels&quot;: [
+        &quot;HIGH_FIBER&quot;,
+        &quot;LOW_FAT&quot;,
+        &quot;LOW_SODIUM&quot;
+    ],
+    &quot;healthLabels&quot;: [
+        &quot;VEGAN&quot;,
+        &quot;VEGETARIAN&quot;,
+        &quot;PESCATARIAN&quot;,
+        &quot;DAIRY_FREE&quot;,
+        &quot;GLUTEN_FREE&quot;,
+        &quot;WHEAT_FREE&quot;,
+        &quot;EGG_FREE&quot;,
+        &quot;MILK_FREE&quot;,
+        &quot;PEANUT_FREE&quot;,
+        &quot;TREE_NUT_FREE&quot;,
+        &quot;SOY_FREE&quot;,
+        &quot;FISH_FREE&quot;,
+        &quot;SHELLFISH_FREE&quot;,
+        &quot;PORK_FREE&quot;,
+        &quot;RED_MEAT_FREE&quot;,
+        &quot;CRUSTACEAN_FREE&quot;,
+        &quot;CELERY_FREE&quot;,
+        &quot;MUSTARD_FREE&quot;,
+        &quot;SESAME_FREE&quot;,
+        &quot;LUPINE_FREE&quot;,
+        &quot;MOLLUSK_FREE&quot;,
+        &quot;ALCOHOL_FREE&quot;,
+        &quot;NO_OIL_ADDED&quot;,
+        &quot;NO_SUGAR_ADDED&quot;,
+        &quot;SULPHITE_FREE&quot;,
+        &quot;KOSHER&quot;
+    ],
+    &quot;cautions&quot;: [],
+    &quot;totalNutrients&quot;: {
+        &quot;ENERC_KCAL&quot;: {
+            &quot;label&quot;: &quot;Energy&quot;,
+            &quot;quantity&quot;: 1773.611974125,
+            &quot;unit&quot;: &quot;kcal&quot;
+        },
+        &quot;FAT&quot;: {
+            &quot;label&quot;: &quot;Fat&quot;,
+            &quot;quantity&quot;: 18.254111967500002,
+            &quot;unit&quot;: &quot;g&quot;
+        },
+        &quot;FASAT&quot;: {
+            &quot;label&quot;: &quot;Saturated&quot;,
+            &quot;quantity&quot;: 2.0175762444375,
+            &quot;unit&quot;: &quot;g&quot;
+        },
+        &quot;FAMS&quot;: {
+            &quot;label&quot;: &quot;Monounsaturated&quot;,
+            &quot;quantity&quot;: 4.2566793343125005,
+            &quot;unit&quot;: &quot;g&quot;
+        },
+        &quot;FAPU&quot;: {
+            &quot;label&quot;: &quot;Polyunsaturated&quot;,
+            &quot;quantity&quot;: 8.0445047654375,
+            &quot;unit&quot;: &quot;g&quot;
+        },
+        &quot;CHOCDF&quot;: {
+            &quot;label&quot;: &quot;Carbs&quot;,
+            &quot;quantity&quot;: 333.17324807187504,
+            &quot;unit&quot;: &quot;g&quot;
+        },
+        &quot;FIBTG&quot;: {
+            &quot;label&quot;: &quot;Fiber&quot;,
+            &quot;quantity&quot;: 34.5864182125,
+            &quot;unit&quot;: &quot;g&quot;
+        },
+        &quot;SUGAR&quot;: {
+            &quot;label&quot;: &quot;Sugars&quot;,
+            &quot;quantity&quot;: 30.33398974375,
+            &quot;unit&quot;: &quot;g&quot;
+        },
+        &quot;PROCNT&quot;: {
+            &quot;label&quot;: &quot;Protein&quot;,
+            &quot;quantity&quot;: 70.92097383687499,
+            &quot;unit&quot;: &quot;g&quot;
+        },
+        &quot;CHOLE&quot;: {
+            &quot;label&quot;: &quot;Cholesterol&quot;,
+            &quot;quantity&quot;: 0,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;NA&quot;: {
+            &quot;label&quot;: &quot;Sodium&quot;,
+            &quot;quantity&quot;: 69.9888555,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;CA&quot;: {
+            &quot;label&quot;: &quot;Calcium&quot;,
+            &quot;quantity&quot;: 179.14228181250002,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;MG&quot;: {
+            &quot;label&quot;: &quot;Magnesium&quot;,
+            &quot;quantity&quot;: 292.2112326875,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;K&quot;: {
+            &quot;label&quot;: &quot;Potassium&quot;,
+            &quot;quantity&quot;: 2203.1957603749997,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;FE&quot;: {
+            &quot;label&quot;: &quot;Iron&quot;,
+            &quot;quantity&quot;: 13.778644466874999,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;ZN&quot;: {
+            &quot;label&quot;: &quot;Zinc&quot;,
+            &quot;quantity&quot;: 10.0864683825,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;P&quot;: {
+            &quot;label&quot;: &quot;Phosphorus&quot;,
+            &quot;quantity&quot;: 925.00798275,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;VITA_RAE&quot;: {
+            &quot;label&quot;: &quot;Vitamin A&quot;,
+            &quot;quantity&quot;: 8.5048569375,
+            &quot;unit&quot;: &quot;µg&quot;
+        },
+        &quot;VITC&quot;: {
+            &quot;label&quot;: &quot;Vitamin C&quot;,
+            &quot;quantity&quot;: 11.33980925,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;THIA&quot;: {
+            &quot;label&quot;: &quot;Thiamin (B1)&quot;,
+            &quot;quantity&quot;: 1.4887722530625,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;RIBF&quot;: {
+            &quot;label&quot;: &quot;Riboflavin (B2)&quot;,
+            &quot;quantity&quot;: 0.69460989025,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;NIA&quot;: {
+            &quot;label&quot;: &quot;Niacin (B3)&quot;,
+            &quot;quantity&quot;: 7.4886615135625,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;VITB6A&quot;: {
+            &quot;label&quot;: &quot;Vitamin B6&quot;,
+            &quot;quantity&quot;: 1.7994494871875002,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;FOLDFE&quot;: {
+            &quot;label&quot;: &quot;Folate equivalent (total)&quot;,
+            &quot;quantity&quot;: 1596.6184380625,
+            &quot;unit&quot;: &quot;µg&quot;
+        },
+        &quot;FOLFD&quot;: {
+            &quot;label&quot;: &quot;Folate (food)&quot;,
+            &quot;quantity&quot;: 1596.6184380625,
+            &quot;unit&quot;: &quot;µg&quot;
+        },
+        &quot;FOLAC&quot;: {
+            &quot;label&quot;: &quot;Folic acid&quot;,
+            &quot;quantity&quot;: 0,
+            &quot;unit&quot;: &quot;µg&quot;
+        },
+        &quot;VITB12&quot;: {
+            &quot;label&quot;: &quot;Vitamin B12&quot;,
+            &quot;quantity&quot;: 0,
+            &quot;unit&quot;: &quot;µg&quot;
+        },
+        &quot;VITD&quot;: {
+            &quot;label&quot;: &quot;Vitamin D&quot;,
+            &quot;quantity&quot;: 0,
+            &quot;unit&quot;: &quot;µg&quot;
+        },
+        &quot;TOCPHA&quot;: {
+            &quot;label&quot;: &quot;Vitamin E&quot;,
+            &quot;quantity&quot;: 2.3246608962499997,
+            &quot;unit&quot;: &quot;mg&quot;
+        },
+        &quot;VITK1&quot;: {
+            &quot;label&quot;: &quot;Vitamin K&quot;,
+            &quot;quantity&quot;: 25.5145708125,
+            &quot;unit&quot;: &quot;µg&quot;
+        },
+        &quot;WATER&quot;: {
+            &quot;label&quot;: &quot;Water&quot;,
+            &quot;quantity&quot;: 46.90793376,
+            &quot;unit&quot;: &quot;g&quot;
+        }
+    },
+    &quot;totalDaily&quot;: {
+        &quot;ENERC_KCAL&quot;: {
+            &quot;label&quot;: &quot;Energy&quot;,
+            &quot;quantity&quot;: 88.68059870625,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;FAT&quot;: {
+            &quot;label&quot;: &quot;Fat&quot;,
+            &quot;quantity&quot;: 28.083249180769236,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;FASAT&quot;: {
+            &quot;label&quot;: &quot;Saturated&quot;,
+            &quot;quantity&quot;: 10.087881222187502,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;CHOCDF&quot;: {
+            &quot;label&quot;: &quot;Carbs&quot;,
+            &quot;quantity&quot;: 111.05774935729168,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;FIBTG&quot;: {
+            &quot;label&quot;: &quot;Fiber&quot;,
+            &quot;quantity&quot;: 138.34567285,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;PROCNT&quot;: {
+            &quot;label&quot;: &quot;Protein&quot;,
+            &quot;quantity&quot;: 141.84194767374998,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;CHOLE&quot;: {
+            &quot;label&quot;: &quot;Cholesterol&quot;,
+            &quot;quantity&quot;: 0,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;NA&quot;: {
+            &quot;label&quot;: &quot;Sodium&quot;,
+            &quot;quantity&quot;: 2.9162023125,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;CA&quot;: {
+            &quot;label&quot;: &quot;Calcium&quot;,
+            &quot;quantity&quot;: 17.91422818125,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;MG&quot;: {
+            &quot;label&quot;: &quot;Magnesium&quot;,
+            &quot;quantity&quot;: 69.57410302083333,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;K&quot;: {
+            &quot;label&quot;: &quot;Potassium&quot;,
+            &quot;quantity&quot;: 46.87650553989361,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;FE&quot;: {
+            &quot;label&quot;: &quot;Iron&quot;,
+            &quot;quantity&quot;: 76.54802481597221,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;ZN&quot;: {
+            &quot;label&quot;: &quot;Zinc&quot;,
+            &quot;quantity&quot;: 91.69516711363636,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;P&quot;: {
+            &quot;label&quot;: &quot;Phosphorus&quot;,
+            &quot;quantity&quot;: 132.14399753571428,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;VITA_RAE&quot;: {
+            &quot;label&quot;: &quot;Vitamin A&quot;,
+            &quot;quantity&quot;: 0.9449841041666667,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;VITC&quot;: {
+            &quot;label&quot;: &quot;Vitamin C&quot;,
+            &quot;quantity&quot;: 12.599788055555557,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;THIA&quot;: {
+            &quot;label&quot;: &quot;Thiamin (B1)&quot;,
+            &quot;quantity&quot;: 124.06435442187501,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;RIBF&quot;: {
+            &quot;label&quot;: &quot;Riboflavin (B2)&quot;,
+            &quot;quantity&quot;: 53.43153001923077,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;NIA&quot;: {
+            &quot;label&quot;: &quot;Niacin (B3)&quot;,
+            &quot;quantity&quot;: 46.80413445976562,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;VITB6A&quot;: {
+            &quot;label&quot;: &quot;Vitamin B6&quot;,
+            &quot;quantity&quot;: 138.4191913221154,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;FOLDFE&quot;: {
+            &quot;label&quot;: &quot;Folate equivalent (total)&quot;,
+            &quot;quantity&quot;: 399.154609515625,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;VITB12&quot;: {
+            &quot;label&quot;: &quot;Vitamin B12&quot;,
+            &quot;quantity&quot;: 0,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;VITD&quot;: {
+            &quot;label&quot;: &quot;Vitamin D&quot;,
+            &quot;quantity&quot;: 0,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;TOCPHA&quot;: {
+            &quot;label&quot;: &quot;Vitamin E&quot;,
+            &quot;quantity&quot;: 15.497739308333331,
+            &quot;unit&quot;: &quot;%&quot;
+        },
+        &quot;VITK1&quot;: {
+            &quot;label&quot;: &quot;Vitamin K&quot;,
+            &quot;quantity&quot;: 21.26214234375,
+            &quot;unit&quot;: &quot;%&quot;
+        }
+    },
+    &quot;ingredients&quot;: [
+        {
+            &quot;text&quot;: &quot;1 cup rice,&quot;,
+            &quot;parsed&quot;: [
+                {
+                    &quot;quantity&quot;: 1,
+                    &quot;measure&quot;: &quot;cup&quot;,
+                    &quot;foodMatch&quot;: &quot;rice&quot;,
+                    &quot;food&quot;: &quot;rice&quot;,
+                    &quot;foodId&quot;: &quot;food_bpumdjzb5rtqaeabb0kbgbcgr4t9&quot;,
+                    &quot;weight&quot;: 195,
+                    &quot;retainedWeight&quot;: 195,
+                    &quot;nutrients&quot;: {
+                        &quot;RIBF&quot;: {
+                            &quot;label&quot;: &quot;Riboflavin&quot;,
+                            &quot;quantity&quot;: 0.09359999999999999,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;VITD&quot;: {
+                            &quot;label&quot;: &quot;Vitamin D&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;IU&quot;
+                        },
+                        &quot;THIA&quot;: {
+                            &quot;label&quot;: &quot;Thiamin&quot;,
+                            &quot;quantity&quot;: 0.1365,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;FAPU&quot;: {
+                            &quot;label&quot;: &quot;Fatty acids, total polyunsaturated&quot;,
+                            &quot;quantity&quot;: 0.30225,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;NIA&quot;: {
+                            &quot;label&quot;: &quot;Niacin&quot;,
+                            &quot;quantity&quot;: 3.12,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;ENERC_KCAL&quot;: {
+                            &quot;label&quot;: &quot;Energy&quot;,
+                            &quot;quantity&quot;: 702,
+                            &quot;unit&quot;: &quot;kcal&quot;
+                        },
+                        &quot;FASAT&quot;: {
+                            &quot;label&quot;: &quot;Fatty acids, total saturated&quot;,
+                            &quot;quantity&quot;: 0.3081,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;VITC&quot;: {
+                            &quot;label&quot;: &quot;Vitamin C, total ascorbic acid&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;PROCNT&quot;: {
+                            &quot;label&quot;: &quot;Protein&quot;,
+                            &quot;quantity&quot;: 12.8895,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;CHOLE&quot;: {
+                            &quot;label&quot;: &quot;Cholesterol&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;FAMS&quot;: {
+                            &quot;label&quot;: &quot;Fatty acids, total monounsaturated&quot;,
+                            &quot;quantity&quot;: 0.35295000000000004,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;CHOCDF&quot;: {
+                            &quot;label&quot;: &quot;Carbohydrate, by difference&quot;,
+                            &quot;quantity&quot;: 154.71300000000002,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;FAT&quot;: {
+                            &quot;label&quot;: &quot;Total lipid (fat)&quot;,
+                            &quot;quantity&quot;: 1.131,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;VITB6A&quot;: {
+                            &quot;label&quot;: &quot;Vitamin B-6&quot;,
+                            &quot;quantity&quot;: 0.28275,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;VITB12&quot;: {
+                            &quot;label&quot;: &quot;Vitamin B-12&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        },
+                        &quot;WATER&quot;: {
+                            &quot;label&quot;: &quot;Water&quot;,
+                            &quot;quantity&quot;: 25.1355,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;K&quot;: {
+                            &quot;label&quot;: &quot;Potassium, K&quot;,
+                            &quot;quantity&quot;: 167.7,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;P&quot;: {
+                            &quot;label&quot;: &quot;Phosphorus, P&quot;,
+                            &quot;quantity&quot;: 210.6,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;NA&quot;: {
+                            &quot;label&quot;: &quot;Sodium, Na&quot;,
+                            &quot;quantity&quot;: 1.95,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;ZN&quot;: {
+                            &quot;label&quot;: &quot;Zinc, Zn&quot;,
+                            &quot;quantity&quot;: 2.262,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;CA&quot;: {
+                            &quot;label&quot;: &quot;Calcium, Ca&quot;,
+                            &quot;quantity&quot;: 17.55,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;MG&quot;: {
+                            &quot;label&quot;: &quot;Magnesium, Mg&quot;,
+                            &quot;quantity&quot;: 68.25,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;FE&quot;: {
+                            &quot;label&quot;: &quot;Iron, Fe&quot;,
+                            &quot;quantity&quot;: 1.56,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;FOLFD&quot;: {
+                            &quot;label&quot;: &quot;Folate, food&quot;,
+                            &quot;quantity&quot;: 17.55,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        },
+                        &quot;FOLAC&quot;: {
+                            &quot;label&quot;: &quot;Folic acid&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        },
+                        &quot;FOLDFE&quot;: {
+                            &quot;label&quot;: &quot;Folate, DFE&quot;,
+                            &quot;quantity&quot;: 17.55,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        }
+                    },
+                    &quot;measureURI&quot;: &quot;http://www.edamam.com/ontologies/edamam.owl#Measure_cup&quot;,
+                    &quot;status&quot;: &quot;OK&quot;
+                }
+            ]
+        },
+        {
+            &quot;text&quot;: &quot;10 oz chickpeas&quot;,
+            &quot;parsed&quot;: [
+                {
+                    &quot;quantity&quot;: 10,
+                    &quot;measure&quot;: &quot;ounce&quot;,
+                    &quot;foodMatch&quot;: &quot;chickpeas&quot;,
+                    &quot;food&quot;: &quot;bengal gram&quot;,
+                    &quot;foodId&quot;: &quot;food_baux5rqbkto336asd7w3lbbi1koo&quot;,
+                    &quot;weight&quot;: 283.49523125,
+                    &quot;retainedWeight&quot;: 283.49523125,
+                    &quot;nutrients&quot;: {
+                        &quot;RIBF&quot;: {
+                            &quot;label&quot;: &quot;Riboflavin&quot;,
+                            &quot;quantity&quot;: 0.6010098902500001,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;VITD&quot;: {
+                            &quot;label&quot;: &quot;Vitamin D&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;IU&quot;
+                        },
+                        &quot;THIA&quot;: {
+                            &quot;label&quot;: &quot;Thiamin&quot;,
+                            &quot;quantity&quot;: 1.3522722530625,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;FAPU&quot;: {
+                            &quot;label&quot;: &quot;Fatty acids, total polyunsaturated&quot;,
+                            &quot;quantity&quot;: 7.7422547654375,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;NIA&quot;: {
+                            &quot;label&quot;: &quot;Niacin&quot;,
+                            &quot;quantity&quot;: 4.3686615135624995,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;ENERC_KCAL&quot;: {
+                            &quot;label&quot;: &quot;Energy&quot;,
+                            &quot;quantity&quot;: 1071.6119741250002,
+                            &quot;unit&quot;: &quot;kcal&quot;
+                        },
+                        &quot;FASAT&quot;: {
+                            &quot;label&quot;: &quot;Fatty acids, total saturated&quot;,
+                            &quot;quantity&quot;: 1.7094762444375002,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;VITA_RAE&quot;: {
+                            &quot;label&quot;: &quot;Vitamin A, RAE&quot;,
+                            &quot;quantity&quot;: 8.504856937500001,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        },
+                        &quot;VITC&quot;: {
+                            &quot;label&quot;: &quot;Vitamin C, total ascorbic acid&quot;,
+                            &quot;quantity&quot;: 11.33980925,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;PROCNT&quot;: {
+                            &quot;label&quot;: &quot;Protein&quot;,
+                            &quot;quantity&quot;: 58.031473836875,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;TOCPHA&quot;: {
+                            &quot;label&quot;: &quot;Vitamin E (alpha-tocopherol)&quot;,
+                            &quot;quantity&quot;: 2.32466089625,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;CHOLE&quot;: {
+                            &quot;label&quot;: &quot;Cholesterol&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;FAMS&quot;: {
+                            &quot;label&quot;: &quot;Fatty acids, total monounsaturated&quot;,
+                            &quot;quantity&quot;: 3.9037293343125,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;CHOCDF&quot;: {
+                            &quot;label&quot;: &quot;Carbohydrate, by difference&quot;,
+                            &quot;quantity&quot;: 178.46024807187504,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;FAT&quot;: {
+                            &quot;label&quot;: &quot;Total lipid (fat)&quot;,
+                            &quot;quantity&quot;: 17.1231119675,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;VITB6A&quot;: {
+                            &quot;label&quot;: &quot;Vitamin B-6&quot;,
+                            &quot;quantity&quot;: 1.5166994871875001,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;VITB12&quot;: {
+                            &quot;label&quot;: &quot;Vitamin B-12&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        },
+                        &quot;FIBTG&quot;: {
+                            &quot;label&quot;: &quot;Fiber, total dietary&quot;,
+                            &quot;quantity&quot;: 34.5864182125,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;WATER&quot;: {
+                            &quot;label&quot;: &quot;Water&quot;,
+                            &quot;quantity&quot;: 21.77243376,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;K&quot;: {
+                            &quot;label&quot;: &quot;Potassium, K&quot;,
+                            &quot;quantity&quot;: 2035.4957603750001,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;P&quot;: {
+                            &quot;label&quot;: &quot;Phosphorus, P&quot;,
+                            &quot;quantity&quot;: 714.4079827500001,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;NA&quot;: {
+                            &quot;label&quot;: &quot;Sodium, Na&quot;,
+                            &quot;quantity&quot;: 68.03885550000001,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;ZN&quot;: {
+                            &quot;label&quot;: &quot;Zinc, Zn&quot;,
+                            &quot;quantity&quot;: 7.8244683825,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;SUGAR&quot;: {
+                            &quot;label&quot;: &quot;Sugars, total&quot;,
+                            &quot;quantity&quot;: 30.33398974375,
+                            &quot;unit&quot;: &quot;g&quot;
+                        },
+                        &quot;CA&quot;: {
+                            &quot;label&quot;: &quot;Calcium, Ca&quot;,
+                            &quot;quantity&quot;: 161.5922818125,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;MG&quot;: {
+                            &quot;label&quot;: &quot;Magnesium, Mg&quot;,
+                            &quot;quantity&quot;: 223.9612326875,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;FE&quot;: {
+                            &quot;label&quot;: &quot;Iron, Fe&quot;,
+                            &quot;quantity&quot;: 12.218644466875,
+                            &quot;unit&quot;: &quot;mg&quot;
+                        },
+                        &quot;VITK1&quot;: {
+                            &quot;label&quot;: &quot;Vitamin K (phylloquinone)&quot;,
+                            &quot;quantity&quot;: 25.5145708125,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        },
+                        &quot;FOLFD&quot;: {
+                            &quot;label&quot;: &quot;Folate, food&quot;,
+                            &quot;quantity&quot;: 1579.0684380625003,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        },
+                        &quot;FOLAC&quot;: {
+                            &quot;label&quot;: &quot;Folic acid&quot;,
+                            &quot;quantity&quot;: 0,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        },
+                        &quot;FOLDFE&quot;: {
+                            &quot;label&quot;: &quot;Folate, DFE&quot;,
+                            &quot;quantity&quot;: 1579.0684380625003,
+                            &quot;unit&quot;: &quot;µg&quot;
+                        }
+                    },
+                    &quot;measureURI&quot;: &quot;http://www.edamam.com/ontologies/edamam.owl#Measure_ounce&quot;,
+                    &quot;status&quot;: &quot;OK&quot;
+                }
+            ]
+        }
+    ]
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
